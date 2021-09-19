@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: List files
         run: |
-          pwdadded
+          pwd
           ls
       - name: checkout
         uses: actions/checkout@v2
