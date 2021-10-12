@@ -6,7 +6,13 @@ on:
 #    - cron: "0/5 * * * *"
   repository_dispatch:
     types: [build]
+  push:
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
+      - 'feature/*'
     types:
       - closed
       - assigned
