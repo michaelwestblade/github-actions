@@ -6,10 +6,10 @@ jobs:
     steps:
       - name: dump
         run: |
-          echo {{ contains('hello', '11') }}
-          echo {{ startsWith('hello', 'he') }}
-          echo {{ endsWith('hello', 'lo') }}
-          echo {{ format('hello {0} {1} {2}', 'World', '!', '!') }}
+          echo ${{ contains('hello', '11') }}
+          echo ${{ startsWith('hello', 'he') }}
+          echo ${{ endsWith('hello', 'lo') }}
+          echo ${{ format('hello {0} {1} {2}', 'World', '!', '!') }}
   one:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
